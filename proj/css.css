@@ -1,0 +1,113 @@
+header{
+    width: 100%;
+    height: 100px;
+    background-color:#000218;
+    
+}
+.logo{
+    display: flex;
+    height: 100%;
+    width: 20%;
+    float: left;
+    background-color: #000218;
+    justify-content:space-around;
+}
+.oboi{
+  display: flex;
+  background-image:url(./img/oboi.jpg) ;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 500px;
+  font-family: cursive;
+  justify-content: center;
+}
+.categ {
+  height: fit-content;
+  width: 15%;
+  float: left;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.menu {
+  float: right;
+  }
+  
+body
+{
+  background-color: #000218;
+  color: #cdcdcd; 
+}
+  
+a
+{
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.menu-bug{
+
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    align-content: end;
+    justify-content: flex-end;  /*добавить в js */
+}
+#bur{
+  width: 12%;
+  opacity: 0;
+  animation: ani 2.5s forwards;
+}
+#close{
+  width: 20%;
+}
+#menu {
+    display: none;
+    width: 135px;
+    margin: 0 auto;
+    padding: 50px;
+    background: #ededed;
+    list-style-type: none;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    opacity: 0;
+    animation: ani 2.5s forwards;
+    flex-direction: column;
+    align-items: center;  
+}
+  
+  #menu li
+  {
+    padding: 10px 0;
+    font-size: 22px;
+  }
+  #menuToggle input:checked ~ ul
+  {
+    transform: none;
+    opacity: 1;
+  }
+.content{
+  display: flex;
+  width: 85%;
+}
+@keyframes ani {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+footer{
+  height: 100px;
+  width: 100%;
+}
+.links{
+  display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.telephone{
+  display: flex;
+  flex-direction: column;
+}
+.info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
