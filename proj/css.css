@@ -88,6 +88,7 @@ a
 .content{
   display: flex;
   width: 85%;
+  flex-direction: column;
 }
 @keyframes ani {
   0% {opacity: 0;}
@@ -104,7 +105,7 @@ footer{
 }
 .telephone{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 .info{
   display: flex;

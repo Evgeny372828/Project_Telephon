@@ -25,4 +25,7 @@ app.add_middleware(
 def vivod():
     comp=db.query(Company).all()
     telep = db.query(Telephone).all()
+    # kateg = db.query(Company, Telephone).filter(Telephone.name_company == Company.id)
     return comp,telep
+
+
