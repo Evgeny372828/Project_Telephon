@@ -54,10 +54,11 @@ a
     justify-content: flex-end;  /*добавить в js */
 }
 #bur{
-  width: 12%;
+  width: 8%;
   opacity: 0;
   animation: ani 2.5s forwards;
 }
+
 #close{
   width: 20%;
 }
@@ -111,4 +112,10 @@ footer{
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+.kat{
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+
 }

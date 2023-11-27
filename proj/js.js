@@ -33,7 +33,7 @@ close.addEventListener('click',function open() {
 fetch("http://127.0.0.1:8000/vivod")
 .then(res=>res.json())
 .then(data=> {
-  for (i in data){
+  for (i in data  ){
     comp=data[0]
     telep=data[1]
     name_company=comp[i].name_company
@@ -63,9 +63,11 @@ fetch("http://127.0.0.1:8000/vivod")
     for(b in data[0]){
       if (comp[b].id==telep[i].name_company) {
         div_comp.innerText ="Название компании: "+ comp[b].name_company
+        a.className=comp[b].name_company
+        div_telephone.id=comp[b].name_company
       }
     }
-    div_telephone.id=comp[b].name_company
+  
     img.src=telep_img
     categ.append(a)
     categ.appendChild(label)
@@ -76,18 +78,23 @@ fetch("http://127.0.0.1:8000/vivod")
     div_telephone.appendChild(img)
     div_telephone.appendChild(div_info)
     cont.appendChild(div_telephone)
-    if (label.innerText!=div_telephone.id) {
-      document.getElementById(div_telephone.id).remove()
+    a.addEventListener("click",function(){
+      inputs=document.querySelectorAll("#inp")
+      len=Object.keys(inputs).length
+      telephons=document.querySelectorAll(".telephone")
+      len2=Object.keys(telephons).length
+      if(a.checked){
+      for (let p =0 ; p< len;p++){
+        for(let f =0 ; p< len2;f++){
+          if(inputs[p].className!=telephons[f].id){
+            telephons[f].remove() 
+        }  
+        }
+    }
+    }
+    })
   }
   }
 
-})
-inputs=document.querySelectorAll("#inp")
+)
 
-for (p in inputs){
-  console.log("faf")
-  
-  if (inputs[p].checked) {
-    console.log("Ура победа")
-  }
-}
